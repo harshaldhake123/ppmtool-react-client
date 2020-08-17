@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+img {
+	width : 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+	background-color : #e3f2fd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fa.fa-edit {
+	color : #18a2b9;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.list-group-item.delete:hover {
+	background-color : pink;
+	cursor           : grab;
 }
 
-.App-link {
-  color: #61dafb;
+.list-group-item.update:hover {
+	background-color : gainsboro;
+	cursor           : grab;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-group-item.board:hover {
+	background-color : gainsboro;
+	cursor           : grab;
+}
+
+.fa.fa-minus-circle {
+	color : red;
+}
+
+.landing {
+	background-position : center;
+	/* background: url("../img/showcase.jpg") no-repeat; */
+	background-size     : cover;
+	height              : 100vh;
+	margin-bottom       : -50px;
+	margin-top          : -24px;
+	position            : relative;
+}
+
+.landing-inner {
+	padding-top : 80px;
+}
+
+.dark-overlay {
+	background-color : rgba(0, 0, 0, 0.7);
+	height           : 100%;
+	left             : 0;
+	position         : absolute;
+	top              : 0;
+	width            : 100%;
+}
+
+.card-form {
+	opacity : 0.9;
+}
+
+.latest-profiles-img {
+	height : 40px;
+	width  : 40px;
+}
+
+.form-control::placeholder {
+	color : #bbb !important;
 }
