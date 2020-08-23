@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import ProjectTask from "./ProjectTasks/ProjectTask";
 
 class Backlog extends Component {
@@ -17,9 +17,11 @@ class Backlog extends Component {
             if (tasks[i].props.project_task.status === "TO_DO") {
                 todoItems.push(tasks[i]);
             }
+
             if (tasks[i].props.project_task.status === "IN_PROGRESS") {
                 inProgressItems.push(tasks[i]);
             }
+
             if (tasks[i].props.project_task.status === "DONE") {
                 doneItems.push(tasks[i]);
             }
@@ -28,17 +30,13 @@ class Backlog extends Component {
         return (
             <div className="container">
                 <div className="row">
-
-
                     <div className="col-md-4">
                         <div className="card text-center mb-2">
                             <div className="card-header bg-secondary text-white">
                                 <h3>TO DO</h3>
                             </div>
                         </div>
-
                         {todoItems}
-
                     </div>
                     <div className="col-md-4">
                         <div className="card text-center mb-2">
@@ -46,11 +44,7 @@ class Backlog extends Component {
                                 <h3>In Progress</h3>
                             </div>
                         </div>
-                        {/* SAMPLE PROJECT TASK STARTS HERE */}
-
                         {inProgressItems}
-
-                        {/* SAMPLE PROJECT TASK ENDS HERE */}
                     </div>
                     <div className="col-md-4">
                         <div className="card text-center mb-2">
@@ -58,17 +52,11 @@ class Backlog extends Component {
                                 <h3>Done</h3>
                             </div>
                         </div>
-                        {/* SAMPLE PROJECT TASK STARTS HERE */}
-
                         {doneItems}
-
-                        {/* SAMPLE PROJECT TASK ENDS HERE */}
                     </div>
                 </div>
             </div>
-
-        )
-            ;
+        );
     }
 }
 
