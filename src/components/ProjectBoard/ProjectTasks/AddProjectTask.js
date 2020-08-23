@@ -13,7 +13,7 @@ class AddProjectTask extends Component {
         this.state = {
             summary: "",
             acceptanceCriteria: "",
-            status: "",
+            status: "TO_DO",//default status if not mentioned
             priority: 0,
             dueDate: "",
             projectIdentifier: id,
@@ -29,12 +29,10 @@ class AddProjectTask extends Component {
         }
     }
 
-    // on change
     onChange(e) {
         this.setState({[e.target.name]: e.target.value});
     }
 
-    //on submit
     onSubmit(e) {
         e.preventDefault();
 
@@ -108,8 +106,7 @@ class AddProjectTask extends Component {
                                         className="form-control form-control-lg"
                                         name="priority"
                                         value={this.state.priority}
-                                        onChange={this.onChange}
-                                    >
+                                        onChange={this.onChange}>
                                         <option value={0}>Select Priority</option>
                                         <option value={1}>High</option>
                                         <option value={2}>Medium</option>
@@ -122,9 +119,8 @@ class AddProjectTask extends Component {
                                         className="form-control form-control-lg"
                                         name="status"
                                         value={this.state.status}
-                                        onChange={this.onChange}
-                                    >
-                                        <option value="">Select Status</option>
+                                        onChange={this.onChange}>
+                                        <option value="TO_DO">Select Status</option>
                                         <option value="TO_DO">TO DO</option>
                                         <option value="IN_PROGRESS">IN PROGRESS</option>
                                         <option value="DONE">DONE</option>
